@@ -1,0 +1,50 @@
+# CMake build directories
+/build/
+/build-debug/
+/build-release/
+/cmake-build-debug/
+/cmake-build-release/
+
+# CMake generated files
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Executable files
+QuantSim
+QuantSim_tests
+
+# Google Test download cache (if using FetchContent)
+googletest-download/
+
+# Generated test binaries
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.dll
+*.dylib
+
+# IDE-related files (optional)
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Other temporary or hidden files
+*.out
+*.pyc
+__pycache__/
+*.csv

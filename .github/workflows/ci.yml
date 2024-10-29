@@ -1,0 +1,30 @@
+name: C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install C++ dependencies
+        run: sudo apt-get update && sudo apt-get install -y cmake g++ unzip
+
+      - name: Configure and Build C++ Project
+        run: |
+          mkdir -p build
+          cd build
+          cmake ..
+          make
+
+      - name: Run C++ Unit Tests
+        run: |
+          cd build
+          ./QuantSim_tests  # Run the Monte Carlo simulation tests
